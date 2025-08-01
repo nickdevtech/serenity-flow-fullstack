@@ -68,7 +68,7 @@ const SessionEditorPage = () => {
   const loadSession = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/sessions/my-sessions/${id}`, {
+      const response = await fetch(`/api/sessions/my-sessions/${id}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -120,7 +120,7 @@ const SessionEditorPage = () => {
     try {
       const token = localStorage.getItem('token');
       const endpoint = status === 'draft' ? 'save-draft' : 'publish';
-      const response = await fetch(`http://localhost:5000/api/sessions/my-sessions/${endpoint}`, {
+      const response = await fetch(`/api/sessions/my-sessions/${endpoint}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
