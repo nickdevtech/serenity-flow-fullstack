@@ -8,10 +8,10 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss(),
   ],
-   server: {
+  server: {
 		proxy: {
 			"/api": {
-				target: "",
+				target: "http://localhost:5000",
 			},
 		},
 	},
