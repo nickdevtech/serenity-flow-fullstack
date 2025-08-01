@@ -120,7 +120,7 @@ const SessionEditorPage = () => {
     try {
       const token = localStorage.getItem('token');
       const endpoint = status === 'draft' ? 'save-draft' : 'publish';
-      const response = await fetch(`http://localhost:5000/api/sessions/my-sessions/${endpoint}`, {
+      const response = await fetch(`https://serenity-flow-fullstack.onrender.com/api/sessions/my-sessions/${endpoint}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
