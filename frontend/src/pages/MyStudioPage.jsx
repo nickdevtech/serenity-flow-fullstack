@@ -25,7 +25,7 @@ const MyStudioPage = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        "http://localhost:5000/api/sessions/my-sessions/",
+        "/api/sessions/my-sessions/",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -46,7 +46,7 @@ const MyStudioPage = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        `http://localhost:5000/api/sessions/my-sessions/${session._id}`,
+        `/api/sessions/my-sessions/${session._id}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` },
