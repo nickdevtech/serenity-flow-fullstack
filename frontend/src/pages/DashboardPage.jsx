@@ -38,7 +38,7 @@ const DashboardPage = () => {
 
   const loadSessions = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/sessions");
+      const response = await fetch("/api/sessions");
       const data = await response.json();
       setSessions(data);
     } catch (error) {
