@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
     const verifyUser = async () => {
       if (token) {
         try {
-          const response = await fetch('http://localhost:5000/api/auth/profile', {
+          const response = await fetch('/api/auth/profile', {
             headers: {
               'Authorization': `Bearer ${token}`,
             },
